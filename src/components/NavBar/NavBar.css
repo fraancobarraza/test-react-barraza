@@ -1,0 +1,13 @@
+.navbar{
+    color: bisque;
+}
+
+.navlist ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 100px;
+}
+
+.login{
+    margin-left: 100px;
+}
