@@ -3,7 +3,7 @@ import './NavBar.css'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
@@ -33,7 +33,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className='login'>
-                    <Button color="inherit">Login</Button>
+                    <CartWidget/>
                 </div>
             </Toolbar>
         </AppBar>

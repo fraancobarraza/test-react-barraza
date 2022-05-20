@@ -1,12 +1,13 @@
 import './App.css';
-import './test.css'
 import NavBar from './components/NavBar/NavBar'
+import CardList from './components/CardList/CardList'
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <h1 className='title'>Test Barraza</h1>
+      <CardList title={'Quesos Cremosos'}/>
+      <CardList title={'Queso Muzzarella y Tybo'}/>
     </div>
   );
 }

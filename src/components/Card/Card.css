@@ -1,0 +1,22 @@
+.card-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item p{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.card-item img{
+    width: 100%;
+    border: solid 1px;
+}
+
+.card-item span{
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+
