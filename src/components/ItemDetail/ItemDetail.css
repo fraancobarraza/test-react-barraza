@@ -1,0 +1,23 @@
+.detail-container{
+    width: 60%;
+    display: flex;
+    
+}
+
+.detail-info{
+    width: 50%;
+    padding: 90px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.detail-price{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.detail-text{
+    text-align: justify;
+}
