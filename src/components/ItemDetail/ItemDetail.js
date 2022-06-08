@@ -1,8 +1,15 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { Button } from '@mui/material'
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({data}) => {
+    const [count, setCantidad] = useState(1)
+    const [showButton, setShowButton] = useState(false)
+    
+    
+    
     console.log()
     return(
         <div className="detail-container">
@@ -13,8 +20,15 @@ const ItemDetail = ({data}) => {
                 <h2>{data.title}</h2>
                 <span className='detail-price'>$ {data.price} x KG</span>
                 <p className='detail-text'>{data.details}</p>
-                <ItemCount stock={data.stock}/>
-                <Button variant='contained'>Comprar</Button>
+                {!showButton ?
+                <ItemCount 
+                    stock={data.stock} 
+                    count={count} 
+                    actualizarCantidad={setCantidad} 
+                    setShowButton={setShowButton}
+                />
+                :
+                <Button variant='outlined'><Link to='/cart'>Termina mi compra</Link></Button>}
             </div>
         </div>
     )

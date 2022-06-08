@@ -28,7 +28,6 @@ const CardItem = ({ image, title, price, details, stock, category, id } ) => {
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <ItemCount stock={stock}/>
                     <Button variant='outlined'><Link to={`/products/${category}/${id}`}>Detalle</Link></Button>
                     <Button variant='contained' onClick={addCart}>Comprar</Button>
                 </div>
