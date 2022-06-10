@@ -9,24 +9,29 @@ import Details from './pages/Details';
 import NotFound from './pages/NotFound';
 import Category from './pages/Category';
 import Cart from './pages/Cart'
+import ThemeProvider from './context/ThemeContext';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar/>
-        <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/products/:category' element={<Category/>}/>
-          <Route exact path='/products/:category/:id' element={<Details/>}/>
-          <Route exact path='/recipes' element={<Recipes/>}/>
-          <Route exact path='/stores' element={<Stores/>}/>
-          <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/cart' element={<Cart/>}/>
-          <Route exact path='*' element={<NotFound/>}/>
-        </Routes>
-      </BrowserRouter>
-      
+      <CartProvider>
+        <ThemeProvider>
+          <BrowserRouter>
+            <NavBar/>
+            <Routes>
+              <Route exact path='/' element={<Home/>}/>
+              <Route exact path='/products/:category' element={<Category/>}/>
+              <Route exact path='/products/:category/:id' element={<Details/>}/>
+              <Route exact path='/recipes' element={<Recipes/>}/>
+              <Route exact path='/stores' element={<Stores/>}/>
+              <Route exact path='/contact' element={<Contact/>}/>
+              <Route exact path='/cart' element={<Cart/>}/>
+              <Route exact path='*' element={<NotFound/>}/>
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </CartProvider>
     </div>
   );
 }
