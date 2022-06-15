@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.cart-titles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-titles h2{
+  width: 20%;
+}
+
+.cart-content{
+  display: flex;
+}
+
+.cart-content div{
+  width: 20%;
+}
