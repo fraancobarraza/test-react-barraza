@@ -8,8 +8,6 @@ const ItemDetail = ({data}) => {
     const [count, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
     
-    
-    
     console.log()
     return(
         <div className="detail-container">
@@ -22,6 +20,7 @@ const ItemDetail = ({data}) => {
                 <p className='detail-text'>{data.details}</p>
                 {!showButton ?
                 <ItemCount 
+                    addCart={data}
                     stock={data.stock} 
                     count={count} 
                     actualizarCantidad={setCantidad} 
